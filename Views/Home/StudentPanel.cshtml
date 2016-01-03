@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Notic_board_2.Models.UserBO>
+
+@{
+    ViewBag.Title = "StudenPanel";
+    Layout = "~/Views/Shared/_LayoutHomePage.cshtml";
+    ViewBag.colSize = "col-md-10";
+    ViewBag.colSize2 = "col-md-0";
+   
+}
+
+<h2>StudenPanel</h2>
+<button class="btn btn-primary Create_button">Create </button>
+<div class="well">
+    <table class="table table-striped">
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.ImageUrl)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.RollNo)
+            </th>
+
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img class="media-object" src="~/images/dummy.jpg" width="64" height="64" alt="pic">
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RollNo)
+                </td>
+
+                <td>
+                    <button class="btn btn-primary">Edit </button>
+                    <button class="btn btn-primary">Detail </button>
+                    <button class="btn btn-primary">Delete </button>
+                </td>
+            </tr>
+        }
+
+    </table>
+    </div>

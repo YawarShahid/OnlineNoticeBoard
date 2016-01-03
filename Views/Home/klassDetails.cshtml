@@ -1,0 +1,35 @@
+﻿@model Notic_board_2.Models.KlassesBO
+
+@{
+    ViewBag.Title = "klassDetails";
+    Layout = "~/Views/Shared/_LayoutForm.cshtml";
+    ViewBag.colSize = "col-md-10";
+}
+
+<h2>klassDetails</h2>
+
+<div>
+    <h4>KlassesBO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Degree)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Degree)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "HomePage")
+</p>
